@@ -1,0 +1,11 @@
+dataset,model,iteration,avg_latency_us,train_acc_percent,test_acc_percent,tdx_acc_percent
+iris,mlp,1,2.2739,97.5,100,100
+iris,mlp,2,2.2821,97.5,100,100
+iris,mlp,3,2.7781,97.5,100,100
+iris,mlp,4,3.5089,97.5,100,100
+iris,mlp,5,2.3003,97.5,100,100
+iris,mlp,6,2.4001,97.5,100,100
+iris,mlp,7,2.2342,97.5,100,100
+iris,mlp,8,2.4841,97.5,100,100
+iris,mlp,9,2.2647,97.5,100,100
+iris,mlp,10,2.0860,97.5,100,100

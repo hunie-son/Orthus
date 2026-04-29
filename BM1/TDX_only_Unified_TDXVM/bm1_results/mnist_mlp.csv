@@ -1,0 +1,11 @@
+dataset,model,iteration,avg_latency_us,train_acc_percent,test_acc_percent,tdx_acc_percent
+mnist,mlp,1,78.2452,90.38,93.75,93.75
+mnist,mlp,2,72.6240,90.38,93.75,93.75
+mnist,mlp,3,71.6696,90.38,93.75,93.75
+mnist,mlp,4,81.2700,90.38,93.75,93.75
+mnist,mlp,5,71.2654,90.38,93.75,93.75
+mnist,mlp,6,73.3312,90.38,93.75,93.75
+mnist,mlp,7,75.0883,90.38,93.75,93.75
+mnist,mlp,8,73.1498,90.38,93.75,93.75
+mnist,mlp,9,76.9889,90.38,93.75,93.75
+mnist,mlp,10,81.0214,90.38,93.75,93.75

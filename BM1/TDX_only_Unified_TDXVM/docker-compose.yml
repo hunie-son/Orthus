@@ -1,0 +1,19 @@
+services:
+  host:
+    build:
+      context: ./host
+      dockerfile: Dockerfile
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - shared-data:/data
+      - ./host/data:/app/data_inputs:ro
+      # Removed SSH key mount (not needed with sshpass)
+    environment:
+      - TD_SSH_HOST=host.docker.internal
+      - TD_SSH_PORT=10022
+      - TD_SSH_USER=root
+    # Removed entrypoint line (already fixed previously)
+
+volumes:
+  shared-data:

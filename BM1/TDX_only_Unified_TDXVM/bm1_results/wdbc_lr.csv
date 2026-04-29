@@ -1,0 +1,11 @@
+dataset,model,iteration,avg_latency_us,train_acc_percent,test_acc_percent,tdx_acc_percent
+wdbc,lr,1,0.4054,100,100,100
+wdbc,lr,2,2.4396,100,100,100
+wdbc,lr,3,0.4006,100,100,100
+wdbc,lr,4,0.4426,100,100,100
+wdbc,lr,5,0.4098,100,100,100
+wdbc,lr,6,0.3646,100,100,100
+wdbc,lr,7,0.3669,100,100,100
+wdbc,lr,8,0.4067,100,100,100
+wdbc,lr,9,1.0700,100,100,100
+wdbc,lr,10,0.4157,100,100,100
