@@ -1,0 +1,18 @@
+services:
+  host:
+    build:
+      context: .              # Changed from ./host to . (Root)
+      dockerfile: host/Dockerfile  # point to the file
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - shared-data:/data
+      - ./data:/app/data:ro
+    environment:
+      - TD_HOST=host.docker.internal
+      - TD_PORT=10022
+      - TD_USER=root
+      - TD_PASS=123456
+
+volumes:
+  shared-data:

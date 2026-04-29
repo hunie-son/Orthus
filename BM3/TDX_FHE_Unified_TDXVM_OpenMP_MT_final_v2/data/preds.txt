@@ -1,0 +1,2 @@
+sample,true,pred,score0,score1,score2
+0,2,2,-4.24633,1.48232,2.75282

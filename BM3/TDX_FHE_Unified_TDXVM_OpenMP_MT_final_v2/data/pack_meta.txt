@@ -1,0 +1,6 @@
+slots 32768
+d 4
+d1 5
+h 20
+stride 16
+batchcap 2048

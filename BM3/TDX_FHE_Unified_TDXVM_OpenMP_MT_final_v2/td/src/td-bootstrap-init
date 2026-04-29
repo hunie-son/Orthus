@@ -1,0 +1,26 @@
+#!/usr/bin/env sh
+set -eu
+
+# Don't hard-fail on header presence — TD image already built OpenFHE.
+if [ ! -f /usr/local/openfhe/include/openfhe.h ]; then
+  echo "WARN: OpenFHE header not found at /usr/local/openfhe/include/openfhe.h (continuing)"
+else
+  echo "OpenFHE detected."
+fi
+
+# Copy the td-bootstrap binary into the shared volume so host2 can execute it
+if [ -x /app/td-bootstrap ]; then
+  cp -f /app/td-bootstrap /data/td-bootstrap
+  chmod +x /data/td-bootstrap
+  echo "TD: published /data/td-bootstrap"
+else
+  echo "ERROR: /app/td-bootstrap not built" >&2
+  exit 1
+fi
+
+if [ -f /data/cc.json ] && [ -f /data/pk.bin ] && [ -f /data/sk.bin ]; then
+  echo "TD-bootstrap service initialized – keys present."
+else
+  echo "TD-bootstrap service initialized – waiting for /data/{cc.json,pk.bin,sk.bin}."
+fi
+

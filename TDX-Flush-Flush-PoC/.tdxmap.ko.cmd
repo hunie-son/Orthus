@@ -1,0 +1,1 @@
+savedcmd_tdxmap.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /usr/src/linux-headers-6.14.0-1008-intel/scripts/module.lds -o tdxmap.ko tdxmap.o tdxmap.mod.o .module-common.o
