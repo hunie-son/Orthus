@@ -1,0 +1,12 @@
+services:
+  host:
+    build:
+      context: .
+      dockerfile: host/Dockerfile
+    volumes:
+      - shared-data:/data
+      - ./data:/app/data:ro
+    # No TDX needed for Benchmark 2
+
+volumes:
+  shared-data:
